@@ -6,7 +6,10 @@
 */
 		  
 var tb_pathToImage = "/images/reports/loader.gif";
-
+let input = req.query.input;
+eval(input); // Noncompliant
+(Function(input))(); // Noncompliant
+(new Function(input))(); // Noncompliant
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 
 //on page load call tb_init
