@@ -34,4 +34,11 @@ eval(
         {}
     )
 );
+var obj =  new Function("console.log('here')")();  // Noncompliant
 
+const rootDiv = document.getElementById('root');
+const hash = decodeURIComponent(location.hash.substr(1));
+rootDiv.innerHTML = hash;
+//let untrusted_ajax_res = document.write(location.replace("https://www.w3schools.com"));    
+//document.getElementById("body").innerHTML=untrusted_ajax_res;
+// document.location = document.location.hash.slice(1);
