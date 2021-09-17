@@ -35,7 +35,8 @@ eval(
     )
 );
 var obj =  new Function("console.log('here')")();  // Noncompliant
-
+let input = req.query.input;
+eval(input); // Noncompliant
 // const rootDiv = document.getElementById('root');
 // const hash = decodeURIComponent(location.hash.substr(1));
 // rootDiv.innerHTML = hash;
